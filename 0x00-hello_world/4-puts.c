@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
- *
- *  * Program prints out text using puts
- *
- *   */
+ * main - Program prints out text using puts
+ * Return: 0
+ */
 int main(void)
 {
 	char Alx[] = "\"Programming is like building a multilingual puzzle";
