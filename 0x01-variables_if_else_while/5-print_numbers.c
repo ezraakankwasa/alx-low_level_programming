@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Program prints whether number is greater than 0
+ * main - Program prints numbers between 0 and 9
  * Return: 0
  */
 int main(void)
