@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * maiin - Program prints whether number is positive or negative
+ * main - Program prints whether number is positive or negative
  * Return: 0
  */
 int main(void)
