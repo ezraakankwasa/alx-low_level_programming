@@ -15,6 +15,7 @@ int main(void)
 		if (x > 64 && x < 90)
 		{
 			putchar(tolower(x));
+			x++;
 		}
 		else if (x > 90 && x < 97)
 		{
