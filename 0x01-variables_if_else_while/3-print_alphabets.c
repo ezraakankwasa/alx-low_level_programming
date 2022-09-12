@@ -12,7 +12,7 @@ int main(void)
 
 	while (x < 123)
 	{
-		if (x > 64 && x < 90)
+		if (x > 64 && x < 91)
 		{
 			putchar(tolower(x));
 			x++;
