@@ -13,7 +13,7 @@ int main(void)
 	{
 		if (x >= '[' && x <= '`')
 		{
-			putchar('');
+			putchar(127);
 		}
 		putchar(x);
 		x++;
