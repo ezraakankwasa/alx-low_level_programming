@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	int x  = 'a'
+	int x  = 'a';
 
 	while (x < '{')
 	{
-		putchar(c);
+		putchar(x);
 		x++;
 	}
 	return (0);
