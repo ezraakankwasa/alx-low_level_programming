@@ -13,12 +13,11 @@ int main(void)
 	{
 		if (x >= '[' && x <= '`')
 		{
-			continue
+			continue;
 		}
 		putchar(x);
 		x++;
 	}
-	while (
 	putchar('\n');
 	return (0);
 }
