@@ -7,15 +7,16 @@
  */
 int main(void)
 {
-	int x = 65;
+	int x = 97;
 
 	while (x < 123)
 	{
-		if (x >= 91 && x <= 96)
-		{
-			putchar(127);
-		}
 		putchar(x);
+		x++;
+	}
+	while (x < 123)
+	{
+		putchar(toupper(x));
 		x++;
 	}
 	putchar('\n');
