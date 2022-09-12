@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	int x = 'A';
+	int x = 65;
 
-	while (x < '{')
+	while (x < 123)
 	{
-		if (x >= '[' && x <= '`')
+		if (x >= 91 && x <= 96)
 		{
 			putchar(127);
 		}
