@@ -14,12 +14,12 @@ int main(void)
 	{
 		if (x > 64 && x < 90)
 		{
-			putchar(tolower(x))
+			putchar(tolower(x));
 		}
 		else if (x > 90 && x < 97)
 		{
 			x++;
-			continue
+			continue;
 		}
 		else
 		{
