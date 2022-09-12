@@ -8,17 +8,24 @@
  */
 int main(void)
 {
-	int x = 97;
+	int x = 65;
 
 	while (x < 123)
 	{
-		putchar(x);
-		x++;
-	}
-	while (x < 123)
-	{
-		putchar(toupper(x));
-		x++;
+		if (x > 64 && x < 90)
+		{
+			putchar(tolower(x))
+		}
+		else if (x > 90 && x < 97)
+		{
+			x++;
+			continue
+		}
+		else
+		{
+			putchar(toupper(x));
+			x++;
+		}
 	}
 	putchar('\n');
 	return (0);
