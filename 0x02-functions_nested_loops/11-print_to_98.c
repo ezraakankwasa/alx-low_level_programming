@@ -7,9 +7,13 @@
  */
 void print_to_98(int n)
 {
-	while (n < 99)
+	int j = n;
+
+	while (j < 99)
 	{
-		_putchar('0' + n);
+		_putchar('0' + j);
+		_putchar(44);
+		_putchar(32);
 		n++;
 	}
 }
