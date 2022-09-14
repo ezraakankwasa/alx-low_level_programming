@@ -14,7 +14,7 @@ int _abs(int n)
 	{
 		return (n);
 	}
-	else(n < 0)
+	else
 	{
 		x = n * j;
 
