@@ -2,7 +2,7 @@
 
 /**
  * print_square - print n square dimmensions
- * @n: input number of lines to be printed
+ * @size: input number of lines to be printed
  */
 
 void print_square(int size)
@@ -15,9 +15,9 @@ void print_square(int size)
 	}
 	else
 	{
-		for (int i = 0; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 		{
-			for (int j = 0; j <= n; j++)
+			for (int j = 1; j <= n; j++)
 			{
 				_putchar('#');
 			}
