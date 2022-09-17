@@ -5,8 +5,10 @@
  * @n: input number of lines to be printed
  */
 
-void print_square(int n)
+void print_square(int size)
 {
+	int n = size;
+
 	if (n <= 0)
 	{
 		_putchar('\n');
