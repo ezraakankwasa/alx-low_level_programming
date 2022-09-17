@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+/**
+ * main - prints Fizz if divisble by 3
+ * prints buzz if divisble by 5
+ * prints FizzBuzz if divisble by 3 and 5
+ * Return: 0
+ */
+
+int main(void)
+{
+	int i = 100;
+
+	while (i < 101)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", i);
+		}
+	}
+
+	return (0);
+}
