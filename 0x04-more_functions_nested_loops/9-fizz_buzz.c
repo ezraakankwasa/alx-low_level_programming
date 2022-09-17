@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i = 100;
+	int i = 1;
 
 	while (i < 101)
 	{
@@ -29,6 +29,7 @@ int main(void)
 		{
 			printf("%d ", i);
 		}
+		i++;
 	}
 
 	return (0);
