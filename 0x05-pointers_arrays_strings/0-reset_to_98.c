@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - resets a variable to 98
- * @*n: Address of variable
+ * @n: Address of variable
  */
 void reset_to_98(int *n)
 {
