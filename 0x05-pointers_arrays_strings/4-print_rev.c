@@ -12,6 +12,7 @@ void print_rev(char *s)
 	{
 		_putchar(s[j]);
 	}
+	_putchar(10);
 }
 
 /**
@@ -24,7 +25,7 @@ int _strlen(char *s)
 {
 	int count;
 
-	for (count = 0; s[count] != '\0'; ++count);
+	for (count = 0; *(s + count) != '\0'; count++);
 
 	return (count);
 }
