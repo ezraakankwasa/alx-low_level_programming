@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print-triangle - print n triangle dimmensions
+ * print_triangle - print n triangle dimmensions
  * @size: input number of lines to be printed
  */
 
