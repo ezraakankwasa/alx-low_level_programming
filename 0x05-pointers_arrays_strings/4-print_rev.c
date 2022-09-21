@@ -6,26 +6,23 @@
  */
 void print_rev(char *s)
 {
-	int j;
+	int j, count, index, size;
 
-	for (j = _strlen(s); j != -1; j--)
+	index = 0;
+	size = 0;
+
+	for (count = 0; *(s + count) != '\n'; count++)
 	{
-		_putchar(s[j]);
+		size++;
+	}
+
+	while (s[index] != '\n')
+	{
+		for (size; size > -1; size--)
+		{
+			_putchar(*(s + size));
+		}
+		index++;
 	}
 	_putchar(10);
-}
-
-/**
- * _strlen - return length of string.
- * @s: Address of string
- *
- * Return: length of string.
- */
-int _strlen(char *s)
-{
-	int count;
-
-	for (count = 0; *(s + count) != '\0'; count++);
-
-	return (count);
 }
