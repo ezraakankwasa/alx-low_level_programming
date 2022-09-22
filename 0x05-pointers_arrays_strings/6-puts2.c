@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _puts2 - print string to stdo
+ * puts2 - print string to stdo
  * @str: Address of string
  */
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int i;
 
