@@ -15,6 +15,7 @@ void print_square(int size)
 {
 	int n = size;
 	int i, j;
+	int counter = 1;
 
 	if (n <= 0)
 	{
@@ -22,12 +23,20 @@ void print_square(int size)
 	}
 	else
 	{
-		for (int i = 1; i <= n; i++)
+		for (i = 0; i < n; i++)
 		{
-			for (int j = 1; j <= n; j++)
+			for (j = 0; j < n; j++)
 			{
-				_putchar(35);
+				if (j < n - counter)
+				{
+					_putchar(32);
+				}
+				else
+				{
+					_putchar('#');
+				}
 			}
+			counter++;
 			_putchar('\n');
 		}
 	}
