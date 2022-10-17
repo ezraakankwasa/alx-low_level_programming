@@ -1,15 +1,13 @@
 #include "main.h"
-
 /**
  * main - program that prints the minimum number of coins
  * @argc: arg count.
  * @argv: arg vector.
  * Return: 0.
  */
-
 int main(int argc, char *argv[])
 {
-	int exchange;
+int exchange;
 	int currency;
 
 	currency = 0;
