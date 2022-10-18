@@ -1,18 +1,22 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+
 /**
- * main - Program prints numbers between 0 and 9 using putchar
- * Return: 0
+ * main - prints all the numbers of base 16 in lowercase,
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int x = 0;
+	int n;
+	char ch;
 
-	while (x < 10)
+	for (n = 48; n < 58; n++)
 	{
-		putchar(x + '0');
-		x++;
+		putchar(n);
+	}
+	for (ch = 'a'; ch <= 'f'; ch++)
+	{
+		putchar(ch);
 	}
 	putchar('\n');
 	return (0);
