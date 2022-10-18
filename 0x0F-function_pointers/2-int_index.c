@@ -1,41 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
- * main - prints its own opcodes
- * @argc: number of arguments
- * @argv: array of arguments
+ * int_index - earches for an integer
+ * @array: array to search in
+ * @size: size of the array
+ * @cmp: pointer to the comparing function
  *
- * Return: Always 0 (Success)
+ * Return: index of the first element for which
+ * the cmp function does not return 0, or -1 if no match is found
+ * or size is negative
  */
-int main(int argc, char *argv[])
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	int bytes, i;
-	char *arr;
+	int i;
 
-	if (argc != 2)
+	if (array && cmp)
 	{
-		printf("Error\n");
-		exit(1);
-	}
-
-	bytes = atoi(argv[1]);
-
-	if (bytes < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-	arr = (char *)main;
-
-	for (i = 0; i < bytes; i++)
-	{
-		if (i == bytes - 1)
+		for (i = 0; i < size; i++)
 		{
-			printf("%02hhx\n", arr[i]);
-			break;
+			if (cmp(array[i]) != 0)
+				return (i);
 		}
-		printf("%02hhx ", arr[i]);
 	}
-	return (0);
+
+	return (-1);
 }
