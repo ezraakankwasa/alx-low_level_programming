@@ -1,35 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strstr - lcate a substring
- * @haystack: the string to search
- * @needle: the string to find
+ * *_strstr - locates a substring
+ * @haystack: string to search in
+ * @needle: substring to look for
  *
- * Return: char value
+ * Return: pointer to the beginning of the located substring
+ * or NULL if the substring is not found
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int a = 0, b = 0;
+	int i, j;
 
-	while (haystack[a])
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		while (needle[a])
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (haystack[a + b] != needle[b])
-			{
+			if (haystack[i + j] != needle[j])
 				break;
-			}
-
-			b++;
 		}
-
-		if (needle[b] == '\0')
-		{
-			return (haystack + a);
-		}
-
-		a++;
+		if (!needle[j])
+			return (&haystack[i]);
 	}
-
-	return ('\0');
+	return (NULL);
 }
