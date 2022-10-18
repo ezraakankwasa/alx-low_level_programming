@@ -1,75 +1,41 @@
-#include "3-calc.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
-  * op_add - ...
-  * @a: ...
-  * @b: ...
-  *
-  * Return: ...
-  */
-int op_add(int a, int b)
+ * main - prints its own opcodes
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char *argv[])
 {
-	return (a + b);
-}
+	int bytes, i;
+	char *arr;
 
-/**
-  * op_sub - ...
-  * @a: ...
-  * @b: ...
-  *
-  * Return: ...
-  */
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
-
-/**
-  * op_mul - ...
-  * @a: ...
-  * @b: ...
-  *
-  * Return: ...
-  */
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
-
-/**
-  * op_div - ...
-  * @a: ...
-  * @b: ...
-  *
-  * Return: ...
-  */
-int op_div(int a, int b)
-{
-	if (b == 0)
+	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(1);
 	}
 
-	return (a / b);
-}
+	bytes = atoi(argv[1]);
 
-/**
-  * op_mod - ...
-  * @a: ...
-  * @b: ...
-  *
-  * Return: ...
-  */
-int op_mod(int a, int b)
-{
-	if (b == 0)
+	if (bytes < 0)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(2);
 	}
+	arr = (char *)main;
 
-	return (a % b);
+	for (i = 0; i < bytes; i++)
+	{
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
+	return (0);
 }

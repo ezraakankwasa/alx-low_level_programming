@@ -1,24 +1,41 @@
-#include "function_pointers.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * array_iterator - ...
- * @array: ...
- * @size: ...
- * @action: ...
+ * main - prints its own opcodes
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: ...
+ * Return: Always 0 (Success)
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int main(int argc, char *argv[])
 {
-	unsigned int i = 0;
+	int bytes, i;
+	char *arr;
 
-	if (array != NULL && action != NULL && size > 0)
+	if (argc != 2)
 	{
-		while (i < size)
-		{
-			action(array[i]);
-			i++;
-		}
+		printf("Error\n");
+		exit(1);
 	}
 
+	bytes = atoi(argv[1]);
+
+	if (bytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	arr = (char *)main;
+
+	for (i = 0; i < bytes; i++)
+	{
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
+	return (0);
 }
