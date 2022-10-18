@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * main - prints its own opcodes
+ * main - program that perfroms simple operations
  * @argc: number of arguments
  * @argv: array of arguments
  *
@@ -10,32 +9,38 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *arr;
+	int arg1, arg2, result;
+	char o;
+	int (*func)(int, int);
 
-	if (argc != 2)
+	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(98);
 	}
 
-	bytes = atoi(argv[1]);
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
 
-	if (bytes < 0)
+	func = get_op_func(argv[2]);
+
+	if (!func)
 	{
 		printf("Error\n");
-		exit(2);
+		exit(99);
 	}
-	arr = (char *)main;
 
-	for (i = 0; i < bytes; i++)
+	o = *argv[2];
+
+	if ((o == '/' || o == '%') && arg2 == 0)
 	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", arr[i]);
-			break;
-		}
-		printf("%02hhx ", arr[i]);
+		printf("Error\n");
+		exit(100);
 	}
+
+	result = func(arg1, arg2);
+
+	printf("%d\n", result);
+
 	return (0);
 }
