@@ -1,41 +1,27 @@
+#ifndef CALC_H
+#define CALC_H
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * main - prints its own opcodes
- * @argc: number of arguments
- * @argv: array of arguments
+ * struct op - Struct op
  *
- * Return: Always 0 (Success)
+ * @op: The operator
+ * @f: The function associated
  */
-int main(int argc, char *argv[])
+typedef struct op
 {
-	int bytes, i;
-	char *arr;
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(1);
-	}
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
 
-	bytes = atoi(argv[1]);
-
-	if (bytes < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-	arr = (char *)main;
-
-	for (i = 0; i < bytes; i++)
-	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", arr[i]);
-			break;
-		}
-		printf("%02hhx ", arr[i]);
-	}
-	return (0);
-}
+#endif
