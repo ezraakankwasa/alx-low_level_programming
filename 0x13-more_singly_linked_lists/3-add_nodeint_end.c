@@ -6,7 +6,7 @@
  * add_nodeint_end - Adds a new node to the end of a linked list
  * @head: The head of the linked list
  * @n: The value to ad to the end of the new element, or NULL it failed
- *
+ *Return: Nothing
  */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
